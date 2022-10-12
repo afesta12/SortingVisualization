@@ -17,7 +17,7 @@ let sortType = 'Bubble Sort';
 function createDom() {
 
     // Possibly change frame rate later
-    frameRate(15);
+    frameRate(10);
     
     const canvasDiv = document.getElementById('myCanvas');
     width = canvasDiv.offsetWidth;

@@ -32,6 +32,7 @@ function bubbleSort() {
 
     }
 
+    stopSort()
 }
 
 function insertionSort() {
@@ -63,6 +64,8 @@ function insertionSort() {
         }
 
     }
+
+    stopSort();
     
 }
 
@@ -97,6 +100,8 @@ function selectionSort() {
         innerLoop = outerLoop;
 
     }
+
+    stopSort()
 }
 
 
@@ -105,5 +110,16 @@ function swap(a, b) {
     const temp = array[a];
     array[a] = array[b];
     array[b] = temp;
+
+}
+
+function stopSort() {
+
+    if(outerLoop === array.length - 1) {
+
+        startSort = false;
+        sortType = '';
+
+}
 
 }

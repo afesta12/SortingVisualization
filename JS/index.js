@@ -2,8 +2,9 @@
 let array = [];
 
 // colors
-const normal = '#1e1e1e'
-const marker = '#f05454'
+const lightBlue = '#3760b2'
+const darkBlue = '#00126b'
+const white = '#ffffff'
 
 function setup() {
 
@@ -18,7 +19,7 @@ function draw() {
 
     // Clear canvas every iteration of draw so array values don't stack
     clear();
-    background(200);
+    background('#bacae2');
 
     // Draw array
     for(let i = 0; i < array.length; i++) {
@@ -30,25 +31,27 @@ function draw() {
 
             case 'Bubble Sort':
 
-                if(i === innerLoop && startSort) fill(marker);
-                else fill(normal);
+                if(i === innerLoop && startSort) fill(darkBlue);
+                else fill(lightBlue);
+
                 break;
 
             case 'Insertion Sort':
 
-                if(i === outerLoop && startSort) fill(marker);
-                else fill(normal);
+                if(i === outerLoop && startSort) fill(darkBlue);
+                else fill(lightBlue);
                 break;
 
             case 'Selection Sort':
 
-                if(i === innerLoop && startSort) fill(marker);
-                else fill(normal);
+                if(i === innerLoop && startSort) fill(darkBlue);
+                else fill(lightBlue);
 
-                if(i === minIndex && startSort) fill(marker);
-                if(i === outerLoop && startSort) fill('ffffff')
+                if(i === minIndex && startSort) fill(darkBlue);
+                if(i === outerLoop && startSort) fill(white)
 
             default:
+
                 break;
         }
 
