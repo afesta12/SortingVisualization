@@ -48,10 +48,18 @@ function draw() {
                 else fill(lightBlue);
 
                 if(i === minIndex && startSort) fill(darkBlue);
-                if(i === outerLoop && startSort) fill(white)
+                if(i === outerLoop && startSort) fill(white);
+
+                break;
+
+            case 'Gnome Sort':
+
+                if(i === outerLoop && startSort) fill(darkBlue);
+                else fill(lightBlue);
+                break;
 
             default:
-
+                
                 break;
         }
 
@@ -79,8 +87,14 @@ function draw() {
 
                 selectionSort();
                 break;
+
+            case 'Gnome Sort':
+
+                gnomeSort();
+                break;
         
             default:
+
                 break;
         }
 

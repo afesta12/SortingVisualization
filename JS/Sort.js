@@ -104,6 +104,22 @@ function selectionSort() {
     stopSort()
 }
 
+function gnomeSort() {
+
+    if(outerLoop === 0) outerLoop++;
+
+    if(array[outerLoop] >= array[outerLoop - 1]) outerLoop++;
+    else {
+
+        swap(outerLoop, outerLoop - 1);
+        outerLoop--;
+
+    }
+
+
+    stopSort();
+}
+
 
 function swap(a, b) {
 
@@ -115,7 +131,7 @@ function swap(a, b) {
 
 function stopSort() {
 
-    if(outerLoop === array.length - 1) {
+    if(outerLoop === array.length) {
 
         startSort = false;
         sortType = '';

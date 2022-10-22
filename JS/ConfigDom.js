@@ -33,6 +33,7 @@ function createDom() {
     selectSort.option('Bubble Sort');
     selectSort.option('Insertion Sort');
     selectSort.option('Selection Sort');
+    selectSort.option('Gnome Sort');
     selectSort.changed(sortEvent);
 
     sortButton = createButton('Start Sort');
